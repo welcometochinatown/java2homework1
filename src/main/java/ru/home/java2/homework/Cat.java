@@ -1,6 +1,6 @@
 package ru.home.java2.homework;
 
-public class Cat implements CanRunAndJump {
+public class Cat implements Competitor {
     private String name;
 
     public Cat(String name) {

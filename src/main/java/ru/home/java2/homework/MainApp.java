@@ -22,15 +22,14 @@ public class MainApp {
         то дальше по списку он препятствий не идет
         */
 
-        CanRunAndJump[] canRunAndJump = {
-                new Human("Bob"),
-                new Cat("Barsik"),
-                new Robot("BipBop")
-        };
+        Competitor[] competitors = {new Human("Bob"), new Cat("Barsik"), new Robot("BipBop")};
 
-        for (CanRunAndJump c : canRunAndJump) {
-            c.run();
-            c.jump();
+        Barrier[] barriers = {new Wall(), new Track()};
+
+        for (Competitor c : competitors) {
+            for (Barrier b : barriers) {
+                b.make(c);
+            }
         }
     }
 }

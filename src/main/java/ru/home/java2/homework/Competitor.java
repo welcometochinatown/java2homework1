@@ -1,6 +1,6 @@
 package ru.home.java2.homework;
 
-public interface CanRunAndJump {
+public interface Competitor {
     void run();
     void jump();
 }

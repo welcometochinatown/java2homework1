@@ -30,16 +30,17 @@ public class MainApp {
 
         Barrier[] barriers = {
                 new Wall(5),
+                new Wall(0),
                 new Wall(10),
                 new Wall(15),
+                new Track(5),
                 new Track(15),
-                new Track(10),
                 new Track(5)
         };
 
         for (Competitor competitor : competitors) {
             for (Barrier barrier : barriers) {
-                if (barrier.make(competitor)) {
+                if (barrier.isntDoable(competitor)) {
                     barrier.make(competitor);
                 } else {
                     break;

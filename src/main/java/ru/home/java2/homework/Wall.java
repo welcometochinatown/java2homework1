@@ -11,4 +11,9 @@ public class Wall implements Barrier {
     public boolean make(Competitor competitor) {
         return competitor.jump(wallHeight);
     }
+
+    @Override
+    public boolean isntDoable(Competitor competitor) {
+        return competitor.cantJump(wallHeight);
+    }
 }

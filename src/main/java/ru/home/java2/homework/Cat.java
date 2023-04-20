@@ -17,7 +17,6 @@ public class Cat implements Competitor {
             System.out.println(name + " бежит");
             return true;
         }
-        System.out.println(name + " дальше не бежит");
         return false;
     }
 
@@ -25,6 +24,23 @@ public class Cat implements Competitor {
     public boolean jump(int height) {
         if (catJumpHeight >= height) {
             System.out.println(name + " прыгнул");
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean cantRun(int distance) {
+        if (catRunDistance >= distance) {
+            return true;
+        }
+        System.out.println(name + " дальше не бежит");
+        return false;
+    }
+
+    @Override
+    public boolean cantJump(int height) {
+        if (catJumpHeight >= height) {
             return true;
         }
         System.out.println(name + " не перепрыгнул");

@@ -24,7 +24,7 @@ public class MainApp {
 
         Competitor[] competitors = {new Human("Bob"), new Cat("Barsik"), new Robot("BipBop")};
 
-        Barrier[] barriers = {new Wall(), new Track()};
+        Barrier[] barriers = {new Wall(), new Wall(), new Track(), new Wall(), new Track()};
 
         for (Competitor c : competitors) {
             for (Barrier b : barriers) {

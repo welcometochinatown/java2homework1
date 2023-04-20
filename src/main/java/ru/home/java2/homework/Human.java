@@ -1,16 +1,19 @@
 package ru.home.java2.homework;
 
-public class Human {
+public class Human implements CanRunAndJump {
     private String name;
 
     public Human(String name) {
         this.name = name;
     }
 
+    @Override
     public void run() {
-        System.out.println("Человек бежит");
+        System.out.println(name + " бежит");
     }
+
+    @Override
     public void jump() {
-        System.out.println("Человек прыгнул");
+        System.out.println(name + " прыгнул");
     }
 }

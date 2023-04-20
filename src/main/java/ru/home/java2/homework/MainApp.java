@@ -22,9 +22,19 @@ public class MainApp {
         то дальше по списку он препятствий не идет
         */
 
-        Competitor[] competitors = {new Human("Bob"), new Cat("Barsik"), new Robot("BipBop")};
+        Competitor[] competitors = {
+                new Human("Bob"),
+                new Cat("Barsik"),
+                new Robot("BipBop")
+        };
 
-        Barrier[] barriers = {new Wall(), new Wall(), new Track(), new Wall(), new Track()};
+        Barrier[] barriers = {
+                new Wall(10),
+                new Wall(5),
+                new Track(15),
+                new Wall(0),
+                new Track(0)
+        };
 
         for (Competitor c : competitors) {
             for (Barrier b : barriers) {

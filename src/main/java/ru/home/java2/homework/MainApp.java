@@ -24,7 +24,7 @@ public class MainApp {
 
         Competitor[] competitors = {
                 new Human("Bob"),
-                new Cat("Barsik"),
+                new Cat("Kitten"),
                 new Robot("BipBop")
         };
 
@@ -36,9 +36,9 @@ public class MainApp {
                 new Track(0)
         };
 
-        for (Competitor c : competitors) {
-            for (Barrier b : barriers) {
-                b.make(c);
+        for (Competitor competitor : competitors) {
+            for (Barrier barrier : barriers) {
+                barrier.make(competitor);
             }
         }
     }

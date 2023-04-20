@@ -8,7 +8,7 @@ public class Wall implements Barrier {
     }
 
     @Override
-    public void make(Competitor competitor) {
-        competitor.jump(wallHeight);
+    public boolean make(Competitor competitor) {
+        return competitor.jump(wallHeight);
     }
 }

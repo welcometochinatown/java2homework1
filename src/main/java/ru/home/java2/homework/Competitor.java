@@ -1,6 +1,6 @@
 package ru.home.java2.homework;
 
 public interface Competitor {
-    void run(int distance);
-    void jump(int height);
+    boolean run(int distance);
+    boolean jump(int height);
 }

@@ -1,29 +1,33 @@
 package ru.home.java2.homework;
 
 public class Robot implements Competitor {
-    private int robotRunDistance = 15;
-    private int robotJumpHeight = 10;
     private String name;
+    private int robotRunDistance;
+    private int robotJumpHeight;
 
-    public Robot(String name) {
+    public Robot(String name, int robotRunDistance, int robotJumpHeight) {
         this.name = name;
+        this.robotRunDistance = robotRunDistance;
+        this.robotJumpHeight = robotJumpHeight;
     }
 
     @Override
-    public void run(int distance) {
+    public boolean run(int distance) {
         if (robotRunDistance >= distance) {
             System.out.println(name + " бежит");
-        } else {
-            System.out.println(name + " дальше не бежит");
+            return true;
         }
+        System.out.println(name + " дальше не бежит");
+        return false;
     }
 
     @Override
-    public void jump(int height) {
+    public boolean jump(int height) {
         if (robotJumpHeight >= height) {
             System.out.println(name + " прыгнул");
-        } else {
-            System.out.println(name + " не перепрыгнул");
+            return true;
         }
+        System.out.println(name + " не перепрыгнул");
+        return false;
     }
 }

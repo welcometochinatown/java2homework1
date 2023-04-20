@@ -23,22 +23,27 @@ public class MainApp {
         */
 
         Competitor[] competitors = {
-                new Human("Bob"),
-                new Cat("Kitten"),
-                new Robot("BipBop")
+                new Human("Bob", 5, 5),
+                new Cat("Kitten", 10, 15),
+                new Robot("BipBop", 15, 10)
         };
 
         Barrier[] barriers = {
-                new Wall(10),
                 new Wall(5),
+                new Wall(10),
+                new Wall(15),
                 new Track(15),
-                new Wall(0),
-                new Track(0)
+                new Track(10),
+                new Track(5)
         };
 
         for (Competitor competitor : competitors) {
             for (Barrier barrier : barriers) {
-                barrier.make(competitor);
+                if (barrier.make(competitor)) {
+                    barrier.make(competitor);
+                } else {
+                    break;
+                }
             }
         }
     }

@@ -4,8 +4,4 @@ public interface Competitor {
     boolean run(int distance);
 
     boolean jump(int height);
-
-    boolean cantRun(int distance);
-
-    boolean cantJump(int height);
 }

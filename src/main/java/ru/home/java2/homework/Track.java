@@ -11,9 +11,4 @@ public class Track implements Barrier {
     public boolean make(Competitor competitor) {
         return competitor.run(trackDistance);
     }
-
-    @Override
-    public boolean isntDoable(Competitor competitor) {
-        return competitor.cantRun(trackDistance);
-    }
 }

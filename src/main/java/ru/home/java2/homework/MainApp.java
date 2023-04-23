@@ -38,11 +38,14 @@ public class MainApp {
                 new Track(5)
         };
 
+        overcomeBarriers(competitors, barriers);
+
+    }
+
+    public static void overcomeBarriers(Competitor[] competitors, Barrier[] barriers) {
         for (Competitor competitor : competitors) {
             for (Barrier barrier : barriers) {
-                if (barrier.isntDoable(competitor)) {
-                    barrier.make(competitor);
-                } else {
+                if (!barrier.make(competitor)) {
                     break;
                 }
             }

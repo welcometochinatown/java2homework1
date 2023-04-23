@@ -17,6 +17,7 @@ public class Human implements Competitor {
             System.out.println(name + " бежит");
             return true;
         }
+        System.out.println(name + " дальше не бежит");
         return false;
     }
 
@@ -24,23 +25,6 @@ public class Human implements Competitor {
     public boolean jump(int height) {
         if (humanJumpHeight >= height) {
             System.out.println(name + " прыгнул");
-            return true;
-        }
-        return false;
-    }
-
-    @Override
-    public boolean cantRun(int distance) {
-        if (humanRunDistance >= distance) {
-            return true;
-        }
-        System.out.println(name + " дальше не бежит");
-        return false;
-    }
-
-    @Override
-    public boolean cantJump(int height) {
-        if (humanJumpHeight >= height) {
             return true;
         }
         System.out.println(name + " не перепрыгнул");
